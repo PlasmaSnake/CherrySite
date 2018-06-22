@@ -1,0 +1,33 @@
+body {
+	font-family: arial;
+	margin: 5px;
+}
+
+
+
+header {
+	height: ;
+	padding: 5px 0 10px 10px;
+}
+
+header h1 {
+}
+
+footer {
+	clear: both;
+	
+}
+
+footer div{
+	margin: 0;
+	width:100%;
+	text-align:center;
+	
+
+}
+.contact
+{
+	color: orange;
+	padding: 10px .5%;
+	text-align: center;
+}
