@@ -7,16 +7,16 @@ body .card {
 	margin: 0% 0% 2% 0%;
 }
 
-li .active {
-	
-}
+
 
 
 header {
 	height: ;
 	padding: 5px 0 10px 10px;
 }
-
+li.active {
+	border-bottom:5px solid #e5202d;
+}
 header h1 {
 }
 
@@ -37,4 +37,21 @@ footer div{
 	color: orange;
 	padding: 10px .5%;
 	text-align: center;
+}
+
+#calendar{
+	padding: 10px;
+	text-align: center;
+	border-radius : 5px;
+	border: 1px solid #e5202d;
+	background-image: linear-gradient(#d3d6cf, #9a9b99);
+}
+
+#calendar-mo-yr {
+
+}
+
+#calendar-dates
+{
+	
 }
