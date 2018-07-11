@@ -1,37 +1,26 @@
+header {
+	margin-bottom: 1%;
+}
+
+li.active {
+	border-bottom:5px solid #e5202d;
+}
 body {
 	font-family: arial;
-	margin: 10% 0px;
+	margin: 0% 0px;
 }
 
 body .card {
 	margin: 0% 0% 2% 0%;
 }
 
-
-
-
-header {
-	height: ;
-	padding: 5px 0 10px 10px;
-}
-li.active {
-	border-bottom:5px solid #e5202d;
-}
-header h1 {
-}
-
 footer {
 	clear: both;
-	
-}
-
-footer div{
 	margin: 0;
 	width:100%;
 	text-align:center;
-	
-
 }
+
 .contact
 {
 	color: orange;
@@ -40,18 +29,25 @@ footer div{
 }
 
 #calendar{
-	padding: 10px;
+	padding: 10px ;
 	text-align: center;
 	border-radius : 5px;
-	border: 1px solid #e5202d;
-	background-image: linear-gradient(#d3d6cf, #9a9b99);
+	border: 1px solid #e5202d; 
+	/*remove border after implementing active*/
+	background-image: radial-gradient(#fad0c4,#ff9a9e);
 }
 
 #calendar-mo-yr {
-
+	font-weight:bold;
 }
 
-#calendar-dates
+#calendar-dates>table{
+	margin: 5px 0px;
+	width: 100%;
+}
+
+#calendar-dates>table>tr>td
 {
-	
+	border:1px solid black;
+	padding: 0px 2px;
 }
