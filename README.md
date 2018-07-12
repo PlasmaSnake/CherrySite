@@ -8,4 +8,4 @@ Uses Bootstrap 4 template.
 ### Dependencies and packages used:
 * express
 * body-parser
-* mongodb
+* mongoose
