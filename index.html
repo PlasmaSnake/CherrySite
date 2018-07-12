@@ -75,7 +75,7 @@
 						<div class="card-footer"><small class="text-muted">Posted 3 hours ago.</small></div>
 			    	</div>
 			    </div> <!-- end of Left Column-->
-			    <div class="col-3" style="">
+			    <div class="col-3">
 					<div class="card">
 
 						<div id = "calendar" class="card-body" style="overflow-x:auto;">
@@ -101,8 +101,14 @@
 			</div>
 		</div> 
 
-		
-		
+		<!-- TODO TEST -->
+		<form method="post" action="/addname">
+			<label>Enter Your Name</label><br>
+			<input type="text" name="firstName" placeholder="Enter first name..." required>
+			<input type="text" name="lastName" placeholder="Enter last name..." required>
+			<input type="submit" value="Add Name">
+		</form>
+
 		<!-- Optional JavaScript -->
 	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
