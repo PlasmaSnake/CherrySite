@@ -7,11 +7,16 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 
 ### Dependencies and packages used:
 * express
-* body-parser
-* mongoose
 * pug
 * nodemon
+
+#### Everything below was installed through express website skeleton creator (express [name] --view=pug)
+* body-parser
+* cookie-parser
+* debug
+* morgan
 * serve-favicon
+
 
 ### How to test...
 
