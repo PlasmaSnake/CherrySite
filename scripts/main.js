@@ -1,9 +1,10 @@
-var express = require("express");
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var path = require('path');
-var app = express();
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const path = require('path');
+const app = express();
 var port = 3000;
+const pug = require ("pug");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -40,5 +41,6 @@ app.listen(port, () => {
 	console.log ("Server listening on port " + port);
 });
 
-
+// TODO Implement change website and image updating
+// TODO Pulling Data from DB
 
