@@ -9,17 +9,16 @@ html(lang='en')
   header
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       h1.text-hide(style="background-image: url('images/icon_placeholder.svg'); width: 32px; height: 32px;margin-top: 6px;margin-right:10px;") Cherry Lou Sy
-      // <a class="navbar-brand" href="#"><img src="images/icon_placeholder.svg" style="width:32px"></a>
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
-          li.nav-item.active
-            a.nav-link(href='/')
-              | Blog
-              span.sr-only (current)
           li.nav-item
-            a.nav-link(href='About') About
+            a.nav-link(href='/') Blog
+          li.nav-item.active
+            a.nav-link(href='About')
+              | About
+              span.sr-only (current)
           li.nav-item
             a.nav-link(href='Contact') Contact
           li.nav-item
@@ -38,31 +37,41 @@ html(lang='en')
           li.nav-item
             a.nav-link.disabled(href='#') Disabled
   body
+    .alert.alert-primary(role='alert')
+      | A simple primary alert—check it out!
     .container
       .row
         .col-9
           .card
             .card-body
-              h5.card-title  This is a test Title for Article 
+              h5.card-title  This is a wild Cherry
+              .text-center
+                img.img-fluid.rounded(src='images/cher_prof.jpg', style='width: 20%', alt="Cherry's Profile Picture")
               p.card-text
-                | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
-            .card-footer
-              small.text-muted Posted 3 hours ago.
-            // Need to implement time since Article posted
+                | Cherry emigrated from the Philippines with her family at the tender age of 11. Since then, she's seen hundreds of plays. 
+                br
+                | She also cooks the good thing.
           .card
             .card-body
-              h5.card-title  This is a test Title for Article 
-              p.card-text
-                | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
-            .card-footer
-              small.text-muted Posted 3 hours ago.
+              h5.card-title  Cherry as an Actress 
+              p.card-text  She say the good thing 
+          .card
+            .card-body
+              h5.card-title  Cherry as a Playwright 
+              p.card-text  She write the good thing 
+          .card
+            .card-body
+              h5.card-title  Cherry as an Educator 
+              p.card-text  She teach the good thing 
         // end of Left Column
         .col-3
           .card
-            #calendar.card-body(style='overflow-x:auto;')
-              #calendar-header
-                span#calendar-mo-yr
-              #calendar-dates.container-fluid
+            .card-body
+              h5.card-title(style='text-align: center;')  Calendar Test 
+              #calendar(style='overflow-x:auto;')
+                #calendar-header
+                  span#calendar-mo-yr
+                #calendar-dates.container-fluid
           .card
             .card-body
               h5.card-title  This is a test Title for Side Column 
@@ -70,12 +79,8 @@ html(lang='en')
             // Make into Follow RSS Feed? Or shared/interesting articles by others space
           .card
             .card-body
-              h5.card-title  Subscribe with Email 
-              p.card-text
-                // TODO TEST data retrieval
-                form(method='post', action='/subscribeEmail')
-                  input(type='text', name='eMail', placeholder='...@yourdomain.com', required='')
-                  input(type='submit', value='Subscribe')
+              h5.card-title  This is a test Title for Side Column 
+              p.card-text  Contact cherry here! Subscribe to know of more events and readings 
         // end of Right Column
     // Optional JavaScript
     // jQuery first, then Popper.js, then Bootstrap JS
@@ -89,4 +94,5 @@ html(lang='en')
       br
       | 	©2018 Cherry Lou Sy.
   // Website Created by Michael Sy.
+  script(type='text/javascript', src='javascripts/calendar.js')
   script(src='scripts/main.js')

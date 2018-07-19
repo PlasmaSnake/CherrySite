@@ -1,0 +1,53 @@
+header {
+	margin-bottom: 1%;
+}
+
+li.active {
+	border-bottom:5px solid #e5202d;
+}
+body {
+	font-family: arial;
+	margin: 0% 0px;
+}
+
+body .card {
+	margin: 0% 0% 2% 0%;
+}
+
+footer {
+	clear: both;
+	margin: 0;
+	width:100%;
+	text-align:center;
+}
+
+.contact
+{
+	color: orange;
+	padding: 10px .5%;
+	text-align: center;
+}
+
+#calendar{
+	padding: 10px ;
+	text-align: center;
+	border-radius : 5px;
+	border: 1px solid #e5202d; 
+	/*remove border after implementing active*/
+	background-image: radial-gradient(#fad0c4,#ff9a9e);
+}
+
+#calendar-mo-yr {
+	font-weight:bold;
+}
+
+#calendar-dates>table{
+	margin: 5px 0px;
+	width: 100%;
+}
+
+#calendar-dates>table>tr>td
+{
+	border:1px solid black;
+	padding: 0px 2px;
+}
