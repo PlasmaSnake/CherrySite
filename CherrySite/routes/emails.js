@@ -1,14 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET email listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/cool', function(req, res, next){
+router.get('/subscribeEMail', function(req, res, next){
 
   res.send('You\'re so cool');
+  // make this subscribe emails
 });
+
+// SEND email newletter
+
+// delete route
 
 module.exports = router;

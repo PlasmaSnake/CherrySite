@@ -66,12 +66,11 @@ html(lang='en')
           .card
             .card-body
               h5.card-title  This is a test Title for Side Column 
-              p.card-text  Contact cherry here! Subscribe to know of more events and readings 
-            // Make into Follow RSS Feed? Or shared/interesting articles by others space
+              p.card-text  Contact cherry here! Subscribe to know of more events and reading. Make into Follow RSS Feed? Or shared/interesting articles by others space
           .card
             .card-body
-              h5.card-title  Subscribe with Email 
-              p.card-text
+              h5.card-title  Sign up for newsletter
+              p.card-text Get info sent to your e-mail when Cherry has a new event, play, or article coming out!
                 // TODO TEST data retrieval
                 form(method='post', action='/subscribeEmail')
                   input(type='text', name='eMail', placeholder='...@yourdomain.com', required='')
