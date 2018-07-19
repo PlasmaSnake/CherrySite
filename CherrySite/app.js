@@ -4,15 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var mongoDB = 'mongodb://admin:testone2@ds141641.mlab.com:41641/cherrysite'; 
+var app = express();
 
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+// Routers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
-
 // MongoDB - Mongoose Set Up
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
