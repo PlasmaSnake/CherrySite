@@ -8,22 +8,6 @@ var EmailSchema = new Schema(
         domain: {type: String, default: "gmail.com"}
     }
 );
-
-//Virtual for email
-EmailSchema
-.virtual('Email')
-.get(function()
-{
-    return this.email;
-});
-
-//Virtual for domain
-EmailSchema
-.virtual('domain')
-.get(function(){
-    return this.domain;
-});
-
 //Need to define delete/unsubscribe
 
 //Export Model

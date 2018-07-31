@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var Email = require('../models/emails.js');
 
 /* GET email listing. */
 router.get('/', function(req, res, next) {
@@ -7,10 +8,10 @@ router.get('/', function(req, res, next) {
   // use layout for testing
 });
 
-router.post('/subscribeEMail', function(req, res, next){
 
-  res.send('You\'re so cool');
-  // make this subscribe emails
+/* POST email to database */
+router.post('/subscribe', function(req, res, next){
+  res.send('subscribing email');
 });
 
 // SEND email newletter

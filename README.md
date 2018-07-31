@@ -18,6 +18,8 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 * morgan
 * serve-favicon
 
+###### To update dependencies: 'npm outdated' and 'npm install package-name --save OR --save-dev'
+
 ### How to test...
 
 #### Database:
@@ -28,3 +30,6 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 
 #### Site Display:
 * "npm start" in terminal - Runs main.js
+
+
+Current Goal: Input an email into the test database and retrieve the email. Then make it work for articles.
