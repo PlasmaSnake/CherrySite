@@ -10,19 +10,12 @@ var ArticleSchema = new Schema(
     }
 );
 
-//Virtual for title
+//Virtual for url
 ArticleSchema
-.virtual('title')
+.virtual('url')
 .get(function()
 {
-    return this.title;
-});
-
-//Virtual for Date created
-ArticleSchema
-.virtual('dateCreated')
-.get(function(){
-    return this.dateCreated;
+    return '/article/'+this._id;
 });
 
 //Export Model

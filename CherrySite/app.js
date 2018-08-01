@@ -7,9 +7,8 @@ var mongoose = require('mongoose');
 var mongoDB = 'mongodb://admin:testone2@ds141641.mlab.com:41641/cherrysite'; 
 var app = express();
 
-// Routers
+// Routers - index handles all routes now
 var indexRouter = require('./routes/index');
-var emailsRouter = require('./routes/emails');
 
 // MongoDB - Mongoose Set Up
 mongoose.connect(mongoDB, {useNewUrlParser: true});
@@ -28,7 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/emails', emailsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

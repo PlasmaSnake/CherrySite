@@ -71,7 +71,6 @@ router.get('/email/update',emails_controller.email_update_get);
 
 /* POST email to update */
 router.post('/email/update',emails_controller.email_update_post);
-// Figure out how to do works pages(Books/Plays/Articles)
 
 // PUBLICATIONS ROUTES
 

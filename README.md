@@ -1,5 +1,5 @@
 # CherrySite
-A website for my sister, a playwright in New York
+A responsive website for my sister, a playwright in New York.
 
 Project site using HTML, CSS and JS.
 
@@ -32,4 +32,19 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 * "npm start" in terminal - Runs main.js
 
 
-Current Goal: Input an email into the test database and retrieve the email. Then make it work for articles.
+Working on: Routing play book and publishings.
+
+Current Goal: 
+
+DATABASE: Input an email into the test database and retrieve the email. Then make it work for articles.
+* POST data into mongodb url.
+* GET data from mongodb url and render it into layout somehow. (Implement in controller, and use route as href in .pug but search for answer)
+
+WEBSITE DESIGN: Replace Logo. (Ask for Logo) 
+
+Goals: 
+1. Implement Media, put in photos and film. 
+2. Implement Works, input data and test.
+3. Better Calendar.
+4. In-app editor, for site admins to use to create, update and delete articles/media.
+5. Test an article object from database and show it in index.pug
