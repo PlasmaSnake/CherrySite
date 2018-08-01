@@ -20,7 +20,19 @@ exports.contact = function(req,res){
 
 exports.archive = function(req,res){
     res.render('archive');
-    // TODO something with article_list
+    // TODO Print something with article_list
+}
+
+exports.plays = function(req,res){
+    res.render('plays');
+}
+
+exports.publishings = function(req,res){
+    res.render('publishings');
+}
+
+exports.books = function(req,res){
+    res.render('books');
 }
 
 // ARTICLE CONTROLS

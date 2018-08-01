@@ -4,11 +4,9 @@ var Schema = mongoose.Schema;
 
 var EmailSchema = new Schema(
     {
-        email: {type: String, required: true, max: 100},
-        domain: {type: String, default: "gmail.com"}
+        email: {type: String, required: true, max: 100}
     }
 );
-//Need to define delete/unsubscribe
 
 //Export Model
 module.exports = mongoose.model('Emails', EmailSchema);
