@@ -1,81 +1,56 @@
-doctype html
-html(lang='en')
-  head
-    title  Cherry Lou Sy 
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel='stylesheet', href='stylesheets/main.css', type='text/css')
-    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB', crossorigin='anonymous')
-  header
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      h1.text-hide(style="background-image: url('images/icon_placeholder.svg'); width: 32px; height: 32px;margin-top: 6px;margin-right:10px;") Cherry Lou Sy
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link(href='/') Blog
-          li.nav-item
-            a.nav-link(href='About') About
-          li.nav-item.active
-            a.nav-link(href='Contact')
-              | Contact
-              span.sr-only (current)
-          li.nav-item
-            a.nav-link(href='Media') Media
-          li.nav-item
-            a.nav-link(href='Contact') Archive
-          li.nav-item.dropdown
-            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Works
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href='#') Plays
-              a.dropdown-item(href='#') Articles
-              a.dropdown-item(href='#') Books
-              .dropdown-divider
-              a.dropdown-item(href='#') Articles
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
-  body
-    h1.contact Contact
-    .container
-      .row
-        .col-9
-          .list-group
-            a.list-group-item.list-group-item-action(href='#') E-Mail: CherryLouSy@cherrylou.com
-            a.list-group-item.list-group-item-action(href='#') Number: 123-345-5678
-            a.list-group-item.list-group-item-action(href='#') Twitter:
-            a.list-group-item.list-group-item-action(href='#') Facebook:
-            a.list-group-item.list-group-item-action(href='#') Instagram:
-        // end of Left Column
-        .col-3
-          .card
-            .card-body
-              #calendar(style='overflow-x:auto;')
-                #calendar-header
-                  span#calendar-mo-yr
-                #calendar-dates.container-fluid
-          .card
-            .card-body
-              h5.card-title  This is a test Title for Side Column 
-              p.card-text  Contact cherry here! Subscribe to know of more events and readings 
-            // Make into Follow RSS Feed? Or shared/interesting articles by others space
-          .card
-            .card-body
-              h5.card-title  This is a test Title for Side Column 
-              p.card-text  Contact cherry here! Subscribe to know of more events and readings 
-        // end of Right Column
-    // Optional JavaScript
-    // jQuery first, then Popper.js, then Bootstrap JS
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T', crossorigin='anonymous')
-  footer
-    small.text-muted
-      | Brand Icons provided by 
-      a(target='_blank', href='https://www.vecteezy.com') www.Vecteezy.com
-      br
-      | 	©2018 Cherry Lou Sy.
-  // Website Created by Michael Sy.
-  script(type='text/javascript', src='javascripts/calendar.js')
-  script(src='scripts/main.js')
+extends index
+
+block activenavigation
+  li.nav-item
+    a.nav-link(href='/') 
+      | Blog
+  li.nav-item
+    a.nav-link(href='About') 
+      | About
+  li.nav-item.active
+    a.nav-link(href='Contact') 
+      | Contact
+      span.sr-only (current)
+  li.nav-item
+    a.nav-link(href='Media')
+      | Media
+  li.nav-item.dropdown
+    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      | Works
+    .dropdown-menu(aria-labelledby='navbarDropdown')
+      a.dropdown-item(href='#') Plays
+      a.dropdown-item(href='#') Publishings
+      a.dropdown-item(href='#') Books
+      .dropdown-divider
+      a.dropdown-item(href='Archive') Archive
+  li.nav-item
+    a.nav-link.disabled(href='#') Disabled
+
+block content
+  h1#contact Contact
+  .container
+    .row
+      .col-9
+        .list-group
+          a.list-group-item.list-group-item-action(href='#') E-Mail: CherryLouSy@cherrylou.com
+          a.list-group-item.list-group-item-action(href='#') Number: 123-345-5678
+          a.list-group-item.list-group-item-action(href='#') Twitter:
+          a.list-group-item.list-group-item-action(href='#') Facebook:
+          a.list-group-item.list-group-item-action(href='#') Instagram:
+      // end of Left Column
+      .col-3
+        .card
+          #calendar(style='overflow-x:auto;')
+            #calendar-header
+              span#calendar-mo-yr
+            #calendar-dates.container-fluid
+        .card
+          .card-body
+            h5.card-title  This is a test Title for Side Column 
+            p.card-text  Contact cherry here! Subscribe to know of more events and readings 
+          // Make into Follow RSS Feed? Or shared/interesting articles by others space
+        .card
+          .card-body
+            h5.card-title  This is a test Title for Side Column 
+            p.card-text  Contact cherry here! Subscribe to know of more events and readings 
+      // end of Right Column

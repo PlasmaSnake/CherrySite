@@ -35,7 +35,7 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 
 Working on: Routing play book and publishings.
 
-Current Goal: Populate the database with dummy emails. Change pug files to extend index.pug (Contact/Media/Archive)
+Current Goal: Populate the database with dummy emails. Change pug files to extend index.pug (Contact/Media/Archive) Change header to highlight the current page. 
 
 DATABASE: Input an email into the test database and retrieve the email. Then make it work for articles.
 * POST data into mongodb url.

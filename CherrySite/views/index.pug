@@ -14,27 +14,28 @@ html(lang='en')
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
-          li.nav-item.active
-            a.nav-link(href='/')
-              | Blog
-              span.sr-only (current)
-          li.nav-item
-            a.nav-link(href='About') About
-          li.nav-item
-            a.nav-link(href='Contact') Contact
-          li.nav-item
-            a.nav-link(href='Media') Media
-          li.nav-item.dropdown
-            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Works
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href='#') Plays
-              a.dropdown-item(href='#') Publishings
-              a.dropdown-item(href='#') Books
-              .dropdown-divider
-              a.dropdown-item(href='Archive') Archive
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
+          block activenavigation
+            li.nav-item.active
+              a.nav-link(href='/')
+                | Blog
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='About') About
+            li.nav-item
+              a.nav-link(href='Contact') Contact
+            li.nav-item
+              a.nav-link(href='Media') Media
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | Works
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='#') Plays
+                a.dropdown-item(href='#') Publishings
+                a.dropdown-item(href='#') Books
+                .dropdown-divider
+                a.dropdown-item(href='Archive') Archive
+            li.nav-item
+              a.nav-link.disabled(href='#') Disabled
   body
     block content
       .container
@@ -88,4 +89,4 @@ html(lang='en')
       br
       | 	©2018 Cherry Lou Sy.
   // Website Created by Michael Sy.
-  script(src='javascripts/script.js')
+  script(src='javascripts/script.js' async)
