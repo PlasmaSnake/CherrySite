@@ -2,6 +2,10 @@ exports.play_list = function(req,res){
     res.send('NOT IMPLEMENTED: Showing all plays in database');
 }
 
+exports.play_detail = function(req,res){
+    res.send('NOT IMPLEMENTED: Play detail:' + req.params.id);
+}
+
 exports.play_create_post = function(req,res){
     // make this get an play on POST
         // make this subscribe plays

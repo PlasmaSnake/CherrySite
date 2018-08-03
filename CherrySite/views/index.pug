@@ -36,47 +36,48 @@ html(lang='en')
           li.nav-item
             a.nav-link.disabled(href='#') Disabled
   body
-    .container
-      .row
-        .col-9
-          .card
-            .card-body
-              h5.card-title  This is a test Title for Article 
-              p.card-text
-                | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
-            .card-footer
-              small.text-muted Posted 3 hours ago.
-            // Need to implement time since Article posted
-          .card
-            .card-body
-              h5.card-title  This is a test Title for Article 
-              p.card-text
-                | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
-            .card-footer
-              small.text-muted Posted 3 hours ago.
-        // end of Left Column
-        .col-3
-          .card
-            #calendar.card-body(style='overflow-x:auto;')
-              #calendar-header
-                span#calendar-mo-yr
-              #calendar-dates.container-fluid
-          .card
-            .card-body
-              h5.card-title  This is a test Title for Side Column 
-              p.card-text  Contact cherry here! Subscribe to know of more events and reading. Make into Follow RSS Feed? Or shared/interesting articles by others space
-          .card
-            .card-body
-              h5.card-title  Sign up for newsletter
-              p.card-text Get info sent to your e-mail when Cherry has a new event, play, or article coming out!
-                // TODO TEST data retrieval 
-                // USING routes/index.js
-                form(method='post', action='/emails/subscribe')
-                  input(type='text', name='email', placeholder='...@yourdomain.com', required='')
-                  input(type='submit', value='Submit')
-        // end of Right Column
-    // Optional JavaScript
-    // jQuery first, then Popper.js, then Bootstrap JS
+    block content
+      .container
+        .row
+          .col-9
+            .card
+              .card-body
+                h5.card-title  This is a test Title for Article 
+                p.card-text
+                  | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+              .card-footer
+                small.text-muted Posted 3 hours ago.
+              // Need to implement time since Article posted
+            .card
+              .card-body
+                h5.card-title  This is a test Title for Article 
+                p.card-text
+                  | Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+              .card-footer
+                small.text-muted Posted 3 hours ago.
+          // end of Left Column
+          .col-3
+            .card
+              #calendar.card-body(style='overflow-x:auto;')
+                #calendar-header
+                  span#calendar-mo-yr
+                #calendar-dates.container-fluid
+            .card
+              .card-body
+                h5.card-title  This is a test Title for Side Column 
+                p.card-text  Contact cherry here! Subscribe to know of more events and reading. Make into Follow RSS Feed? Or shared/interesting articles by others space
+            .card
+              .card-body
+                h5.card-title  Sign up for newsletter
+                p.card-text Get info sent to your e-mail when Cherry has a new event, play, or article coming out!
+                  // TODO TEST data retrieval 
+                  // USING routes/index.js
+                  form(method='post', action='/emails/subscribe')
+                    input(type='text', name='email', placeholder='...@yourdomain.com', required='')
+                    input(type='submit', value='Submit')
+          // end of Right Column
+      // Optional JavaScript
+      // jQuery first, then Popper.js, then Bootstrap JS
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T', crossorigin='anonymous')

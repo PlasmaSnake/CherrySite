@@ -2,6 +2,10 @@ exports.pub_list = function(req,res){
     res.send('NOT IMPLEMENTED: Showing all pubs in database');
 }
 
+exports.pub_detail = function(req,res){
+    res.send('NOT IMPLEMENTED: Publication detail:' + req.params.id);
+}
+
 exports.pub_create_post = function(req,res){
     // make this get an pub on POST
         // make this subscribe pubs

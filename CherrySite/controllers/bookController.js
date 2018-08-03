@@ -2,6 +2,10 @@ exports.book_list = function(req,res){
     res.send('NOT IMPLEMENTED: Showing all books in database');
 }
 
+exports.book_detail = function(req,res){
+    res.send('NOT IMPLEMENTED: Book detail:' + req.params.id);
+}
+
 exports.book_create_post = function(req,res){
     // make this get an book on POST
         // make this subscribe books

@@ -10,6 +10,7 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 * pug
 * nodemon
 * mongoose
+* async
 
 #### Everything below was installed through npm: express website skeleton creator (express [name] --view=pug)
 * body-parser
@@ -34,13 +35,13 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 
 Working on: Routing play book and publishings.
 
-Current Goal: 
+Current Goal: Populate the database with dummy emails. Change pug files to extend index.pug (Contact/Media/Archive)
 
 DATABASE: Input an email into the test database and retrieve the email. Then make it work for articles.
 * POST data into mongodb url.
 * GET data from mongodb url and render it into layout somehow. (Implement in controller, and use route as href in .pug but search for answer)
 
-WEBSITE DESIGN: Replace Logo. (Ask for Logo) 
+WEBSITE DESIGN: Replace Logo. (Ask for Logo) | Format error page.
 
 Goals: 
 1. Implement Media, put in photos and film. 

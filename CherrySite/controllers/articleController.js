@@ -40,6 +40,10 @@ exports.article_list = function(req,res){
     res.send('NOT IMPLEMENTED: Showing all articles in database');
 }
 
+exports.article_detail = function(req,res){
+    res.send('NOT IMPLEMENTED: Article detail:' + req.params.id);
+}
+
 exports.article_create_post = function(req,res){
     // make this get an article on POST
         // make this subscribe articles

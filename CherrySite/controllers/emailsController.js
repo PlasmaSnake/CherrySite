@@ -4,11 +4,15 @@ exports.email_list = function(req,res){
     res.send('NOT IMPLEMENTED: Showing all emails in database');
 }
 
+exports.email_detail = function(req, res){
+    res.send('NOT IMPLMENTED: Email:'+ req.params.id);
+}
+
 exports.email_subscribe_post = function(req,res){
     // make this get an email on POST
         // make this subscribe emails
     res.send('NOT IMPLEMENTED: subscribing email test on POST');
-    var newUser = new Email({
+    var newEmail = new Email({
         email: req.body.email
     });
 }
@@ -16,9 +20,11 @@ exports.email_subscribe_post = function(req,res){
 exports.email_subscribe_get = function(req,res){
     // make this get an email on GET
     res.send('NOT IMPLEMENTED: subscribing email test on GET');
-    var newUser = new Email({
+    var newEmail = new Email({
         email: req.body.email
     });
+    newEmail.save();
+    
 }
 
 exports.email_delete_post = function(req,res){

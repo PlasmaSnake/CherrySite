@@ -7,6 +7,10 @@ var emails_controller = require('../controllers/emailsController');
 /* GET home page. */
 router.get('/', article_controller.index);
 
+router.get('/index', function(req,res){
+    res.redirect('/');
+});
+
 /* GET About page. */
 router.get('/About', article_controller.about);
 
@@ -36,19 +40,22 @@ router.get('/articles', article_controller.article_list);
 router.get('/article/create', article_controller.article_create_get);
 
 /* POST Article create*/
-router.get('/article/create', article_controller.article_create_post);
+router.post('/article/create', article_controller.article_create_post);
 
 /* GET Article to delete*/
-router.get('/article/delete', article_controller.article_delete_get);
+router.get('/article/:id/delete', article_controller.article_delete_get);
 
 /* POST Article to delete*/
-router.get('/article/delete', article_controller.article_delete_post);
+router.post('/article/:id/delete', article_controller.article_delete_post);
 
 /* GET Article to update*/
-router.get('/article/update', article_controller.article_update_get);
+router.get('/article/:id/update', article_controller.article_update_get);
 
 /* POST Article to update*/
-router.get('/article/update', article_controller.article_update_post);
+router.post('/article/:id/update', article_controller.article_update_post);
+
+/* GET One Article */
+router.get('/article/:id', article_controller.article_detail);
 
 // EMAIL ROUTES
 /* GET email listing. */
@@ -61,18 +68,21 @@ router.get('/email/subscribe',emails_controller.email_subscribe_get);
 router.post('/email/subscribe',emails_controller.email_subscribe_post);
 
 /* GET email to delete*/
-router.get('/email/delete',emails_controller.email_delete_get);
+router.get('/email/:id/delete',emails_controller.email_delete_get);
 
 /* POST email to delete */
-router.post('/email/delete',emails_controller.email_delete_post);
+router.post('/email/:id/delete',emails_controller.email_delete_post);
 
 /* GET email to update*/
-router.get('/email/update',emails_controller.email_update_get);
+router.get('/email/:id/update',emails_controller.email_update_get);
 
 /* POST email to update */
-router.post('/email/update',emails_controller.email_update_post);
+router.post('/email/:id/update',emails_controller.email_update_post);
 
-// PUBLICATIONS ROUTES
+/* GET One email */
+router.get('/email/:id', emails_controller.email_detail);
+
+// TODO PUBLICATIONS ROUTES
 
 // BOOKS ROUTES
 
