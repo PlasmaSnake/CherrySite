@@ -1,7 +1,15 @@
 var Email = require('../models/emails');
 
+var async = require('async');
+
 exports.email_list = function(req,res){
-    res.send('NOT IMPLEMENTED: Showing all emails in database');
+
+    Email.find({}, 'email')
+    .exec (function(err, databaseTest){
+        if(err) return next(err); 
+        res.render('databaseTest', {title: 'Mailing List', email_list: databaseTest}); 
+    });
+
 }
 
 exports.email_detail = function(req, res){

@@ -1,0 +1,18 @@
+extends index
+
+block content
+    h1= title
+    p Displaying all emails in mailing list
+
+    if error 
+        p Error getting Dynamic content
+
+    else 
+        ul
+            li #[strong Total Emails:] #{email_list.length}
+            each email in email_list
+                li #{email.email} 
+            
+            else 
+                li there are no emails
+
