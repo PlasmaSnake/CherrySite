@@ -1,6 +1,7 @@
 var Email = require('../models/emails');
 
-var async = require('async');
+var {body, validationResult} = require('express-validator/check');
+var { sanitizeBody } = require('express-validator/filter');
 
 exports.email_list = function(req,res){
 
@@ -16,23 +17,44 @@ exports.email_detail = function(req, res){
     res.send('NOT IMPLMENTED: Email:'+ req.params.id);
 }
 
-exports.email_subscribe_post = function(req,res){
-    // make this get an email on POST
-        // make this subscribe emails
-    res.send('NOT IMPLEMENTED: subscribing email test on POST');
-    var newEmail = new Email({
-        email: req.body.email
-    });
-}
+exports.email_subscribe_post = [
+    
+    body('email', 'Email required').isEmail().trim(),
+    sanitizeBody('email').trim().escape(),
+    function(req,res,next){
+        const errors = validationResult(req);  
+        var newEmail = new Email({
+            email: req.body.email
+        });
+
+        if(!errors.isEmpty()){
+            // if there are errors tell the form to (render the page)?
+            return;
+        }
+        else{
+            // check if it exists
+            Email.findOne({name : req.body.email})
+            .exec( function(err, found_email){
+                if (err) { return next(err);}
+                
+                if (found_email) {
+                    // dupe found
+                    res.redirect('index');
+                }
+                else {
+                    newEmail.save(function (err){
+                        if (err) {return next(err);}
+                        res.redirect('index');
+                    });
+                }
+            });
+        }
+    }   
+];
 
 exports.email_subscribe_get = function(req,res){
-    // make this get an email on GET
+    // make this get an email on GET 
     res.send('NOT IMPLEMENTED: subscribing email test on GET');
-    var newEmail = new Email({
-        email: req.body.email
-    });
-    newEmail.save();
-    
 }
 
 exports.email_delete_post = function(req,res){

@@ -1,4 +1,5 @@
 var Article = require('../models/articles');
+var async = require('async');
 
 // WEBSITE NAVIGATION CONTROLS
 // TODO Find out if I need next

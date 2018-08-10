@@ -11,6 +11,7 @@
     "cookie-parser": "~1.4.3",
     "dos2unix": "^1.1.2",
     "express": "~4.16.0",
+    "express-validator": "^5.3.0",
     "mongodb-stitch-browser-sdk": "^4.0.13",
     "mongoose": "^5.2.6",
     "morgan": "~1.9.0"

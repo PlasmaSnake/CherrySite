@@ -73,9 +73,9 @@ html(lang='en')
                 p.card-text Get info sent to your e-mail when Cherry has a new event, play, or article coming out!
                   // TODO TEST data retrieval 
                   // USING routes/index.js
-                  form(method='post', action='/emails/subscribe')
+                  form(method='post', action='/emails/email_subscribe_post')
                     input(type='text', name='email', placeholder='...@yourdomain.com', required='')
-                    input(type='submit', value='Submit')
+                    button.btn.btn-primary(type='submit') Submit
           // end of Right Column
       // Optional JavaScript
       // jQuery first, then Popper.js, then Bootstrap JS

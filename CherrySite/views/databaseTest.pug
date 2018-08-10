@@ -7,12 +7,15 @@ block content
     if error 
         p Error getting Dynamic content
 
-    else 
-        ul
-            li #[strong Total Emails:] #{email_list.length}
-            each email in email_list
-                li #{email.email} 
-            
-            else 
-                li there are no emails
+    else  
+    .container
+        .row
+            .col-9
+                .list-group
+                    a.list-group-item Total Emails: #{email_list.length}
+                    each email in email_list
+                        a.list-group-item.list-group-item-action(href='#') #{email.email}
+
+                    else 
+                        a.list-group-item There are no emails.
 

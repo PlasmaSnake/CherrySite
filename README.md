@@ -28,17 +28,19 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 * Run cmd as administrator
 * "cd %Mongo%" - Create a environmental variable to change directory to your MongoDB folder.
 * "net start MongoDB" or "net stop MongoDB"
+* type 'node populateEmail <mongodb-url-pw:port>' to insert dummy emails for testing.
+* databaseTest - localhost:3000/emails : for all emails in list. 
 
 #### Site Display:
 * "npm start" in terminal - Runs main.js
 
-Current Goal: Display emails on test page. Save emails via button on homepage.  
+Current Goal: Save emails via button on homepage. Reading up on form: action, method POST/GET, sanitation   
 
 DATABASE: Input an email into the test database and retrieve the email. Then make it work for articles.
 * POST data into mongodb url.
-* GET data from mongodb url and render it into layout somehow. (Implement in controller, and use route as href in .pug but search for answer)
+* GET data from mongodb url (Implemented as databaseTest)
 
-WEBSITE DESIGN: Replace Logo. (Ask for Logo) | Format error page. | Add in works pages
+WEBSITE DESIGN: Replace Logo. (Ask for Logo) | Format error page. | Add in works pages | Prevent Subscription input from inputting false emails.
 
 Goals: 
 1. Implement Media, put in photos and film. 
