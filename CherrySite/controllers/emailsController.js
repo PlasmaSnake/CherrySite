@@ -39,12 +39,12 @@ exports.email_subscribe_post = [
                 
                 if (found_email) {
                     // dupe found
-                    res.redirect('index');
+                    //res.redirect('');
                 }
                 else {
                     newEmail.save(function (err){
                         if (err) {return next(err);}
-                        res.redirect('index');
+                       // res.redirect('');
                     });
                 }
             });
