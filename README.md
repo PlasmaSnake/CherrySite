@@ -34,7 +34,7 @@ Uses Bootstrap 4 template for styling and MongoDB for data.
 #### Site Display:
 * "npm start" in terminal - Runs main.js
 
-Current Goal: Save emails via button on homepage. Reading up on form: action, method POST/GET, sanitation   
+Current Goal: Do the same thing for articles as done with emails (test input, database)
 
 DATABASE: Input an email into the test database and retrieve the email. Then make it work for articles.
 * POST data into mongodb url.
@@ -48,3 +48,4 @@ Goals:
 3. Better Calendar or Calendar page of events. (or omit completely)
 4. In-app editor, for site admins to use to create, update and delete articles/media.
 5. Test an article object from database and show it in index.pug
+6. Use AJAX/Grails(Java) for avoiding refreshing the whole page upon post request.

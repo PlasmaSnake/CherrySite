@@ -39,6 +39,7 @@ exports.email_subscribe_post = [
                 
                 if (found_email) {
                     // dupe found
+                    //TODO
                     //res.redirect('');
                 }
                 else {
