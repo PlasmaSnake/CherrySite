@@ -32,6 +32,10 @@ router.get('/Publications', article_controller.archive);
 /* GET Books page. */
 router.get('/Books', article_controller.archive);
 
+// ADMIN AND CONTENT MANAGING ROUTES
+/* GET Admin page. */
+router.get('/admin', article_controller.admin);
+
 // ARTICLE ROUTES
 /* GET Article list --- Also Archive list. */
 router.get('/articles', article_controller.article_list);

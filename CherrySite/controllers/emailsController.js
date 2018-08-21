@@ -8,9 +8,8 @@ exports.email_list = function(req,res){
     Email.find({}, 'email')
     .exec (function(err, databaseTest){
         if(err) return next(err); 
-        res.render('databaseTest', {title: 'Mailing List', email_list: databaseTest}); 
+        res.render('emailsDatabase', {title: 'Mailing List', email_list: databaseTest}); 
     });
-
 }
 
 exports.email_detail = function(req, res){

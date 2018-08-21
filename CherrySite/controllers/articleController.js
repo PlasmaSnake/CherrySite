@@ -21,7 +21,6 @@ exports.contact = function(req,res){
 
 exports.archive = function(req,res){
     res.render('archive');
-    // TODO Print something with article_list
 }
 
 exports.plays = function(req,res){
@@ -34,6 +33,10 @@ exports.publishings = function(req,res){
 
 exports.books = function(req,res){
     res.render('books');
+}
+// ADMIN TESTING AND CONTENT MANAGING
+exports.admin = function(req,res){
+    res.render('admin');
 }
 
 // ARTICLE CONTROLS

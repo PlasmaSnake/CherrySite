@@ -73,7 +73,7 @@ html(lang='en')
                 p.card-text Get info sent to your e-mail when Cherry has a new event, play, or article coming out!
                   // TODO TEST data retrieval 
                   // USING routes/index.js
-                  form(method='post', action='/email/subscribe')
+                  form#email(method='post', action='/email/subscribe')
                     input(type='text', name='email', placeholder='...@yourdomain.com', required='')
                     button.btn.btn-primary(type='submit') Submit
           // end of Right Column
@@ -87,6 +87,7 @@ html(lang='en')
       | Brand Icons provided by 
       a(target='_blank', href='https://www.vecteezy.com') www.Vecteezy.com
       br
-      | 	©2018 Cherry Lou Sy.
+      a(href='admin') ©2018 Cherry Lou Sy.
   // Website Created by Michael Sy.
+  script(src='javascripts/calendar.js' async)
   script(src='javascripts/script.js' async)
